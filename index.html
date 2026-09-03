@@ -3,22 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="AVANTI Product Catalogues - Explore our range of quality toys and feeding products for kids and pets">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
     <title>AVANTI - Product Catalogues</title>
     <style>
-        * {
+        /* CSS Reset & Base Styles */
+        *,
+        *::before,
+        *::after {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
             background: #f8f8f8;
+            color: #333;
             min-height: 100vh;
             display: flex;
             flex-direction: column;
             position: relative;
             overflow-x: hidden;
+            line-height: 1.5;
+        }
+
+        /* Focus visible for keyboard accessibility */
+        *:focus-visible {
+            outline: 3px solid #333;
+            outline-offset: 2px;
+        }
+
+        /* Skip to main content link */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: #333;
+            color: white;
+            padding: 8px;
+            text-decoration: none;
+            z-index: 999;
+            font-weight: 600;
+        }
+
+        .skip-link:focus {
+            top: 0;
         }
 
         /* Doodle background accents */
@@ -31,14 +67,7 @@
             pointer-events: none;
             z-index: 0;
             opacity: 0.03;
-        }
-
-        .doodle {
-            position: absolute;
-            background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABLAAAASwCAIAAABkQySYAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAgAElEQVR4nO3dQY7rOBKG4crwwIftQQrJSIrqGgZ8Gxz0QXqfQs+jiHkUfQzc98hj0CMvoI8xvIwxvLwNPIFxeMBPFElRokhREkWKf/19AAI4JEvCiRRFkpL4f38//+OPPz59+vSfP//58+fPn3/8+dOnT5+fn//48WfCBgAAAACCLwAAAADgP8FfAAAAAMB/gr8AAAAAgP8EfwEAAAAA/wn+AgAAAAD+E/wFAAAAAPwn+AsAAAAA+E/wFwAAAADwn+AvAAAAAOA/wV8AAAAAwH+CvwAAAACA/wR/AQAAAADf/OvXr/f3d5RSOZdZlkVRZIzR933f9/u+XxQFEaWUMcZxHKUUEaWUMQbHcXRdp7UmogRBEIZhGIZhGIZhGIZhGIZhGIZhGIZhGIZhGP/w/f399fX15eVlvV4vl4vWerPZcBwXhqEwDFMUpTAMQzAM49y5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnT');
-            background-size: 200px 200px;
-            background-repeat: repeat;
-            opacity: 0.08;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200"><path d="M10,10 Q20,20 30,10 T50,10" stroke="%23333" fill="none" stroke-width="1"/><circle cx="80" cy="50" r="15" stroke="%23333" fill="none" stroke-width="1"/></svg>');
         }
 
         /* Content wrapper */
@@ -64,7 +93,7 @@
         .logo-container img {
             max-width: 200px;
             height: auto;
-            display: inline-block;
+            display: block;
         }
 
         .tagline {
@@ -105,7 +134,7 @@
         }
 
         .hero-description {
-            font-size: 0.95em;
+            font-size: 1em;
             color: #555;
             max-width: 600px;
             margin: 0 auto;
@@ -131,12 +160,17 @@
             display: flex;
             flex-direction: column;
             border: 1px solid #f0f0f0;
+            will-change: transform, box-shadow;
         }
 
         .catalogue-card:hover {
             transform: translateY(-6px);
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
             border-color: #e0e0e0;
+        }
+
+        .catalogue-card:focus {
+            outline: none;
         }
 
         .card-header {
@@ -146,7 +180,8 @@
             justify-content: center;
             background: #f5f5f5;
             border-bottom: 1px solid #e8e8e8;
-            font-size: 3em;
+            font-size: 3.5em;
+            aria-hidden: true;
         }
 
         .card-content {
@@ -174,8 +209,8 @@
 
         .download-btn {
             background: #f0f0f0;
-            border: 1px solid #ddd;
-            color: #666;
+            border: 2px solid #ddd;
+            color: #333;
             padding: 10px 20px;
             border-radius: 4px;
             font-weight: 600;
@@ -188,7 +223,8 @@
             align-self: flex-start;
         }
 
-        .catalogue-card:hover .download-btn {
+        .catalogue-card:hover .download-btn,
+        .catalogue-card:focus .download-btn {
             background: #333;
             color: white;
             border-color: #333;
@@ -225,6 +261,7 @@
             color: #999;
         }
 
+        /* Media Queries */
         @media (max-width: 768px) {
             header {
                 padding: 20px;
@@ -257,99 +294,143 @@
                 font-size: 1.15em;
             }
         }
+
+        /* Print styles */
+        @media print {
+            body {
+                background: white;
+            }
+
+            .doodle-bg {
+                display: none;
+            }
+        }
+
+        /* Dark mode support */
+        @media (prefers-color-scheme: dark) {
+            body {
+                background: #1a1a1a;
+                color: #e0e0e0;
+            }
+
+            header,
+            footer,
+            .catalogue-card {
+                background: #2a2a2a;
+                color: #e0e0e0;
+            }
+
+            .card-header {
+                background: #333;
+            }
+
+            a {
+                color: #66b3ff;
+            }
+        }
+
+        /* Reduced motion support */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation: none !important;
+                transition: none !important;
+            }
+        }
     </style>
 </head>
 <body>
-    <div class="doodle-bg"></div>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <div class="doodle-bg" aria-hidden="true"></div>
 
     <div class="content-wrapper">
-        <header>
+        <header role="banner">
             <div class="logo-container">
-                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABLAAAASwCAIAAABkQySYAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAgAElEQVR4nO3dQY7rOBKG4crwwIftQQrJSIrqGgZ8Gxz0QXqfQs+jiHkUfQzc98hj0CMvoI8xvIwxvLwNPIFxeMBPFElRokhREkWKf/39AAI4JEvCiRRFkpL4f38//+OPPz59+vSfP//58+fPn3/8+dOnT5+fn//48WfCBgAAAACCLwAAAADgP8FfAAAAAMB/gr8AAAAAgP8EfwEAAAAA/wn+AgAAAAD+E/wFAAAAAPwn+AsAAAAA+E/wFwAAAADwn+AvAAAAAOA/wV8AAAAAwH+CvwAAAACA/wR/AQAAAADf/OvXr/f3d5RSOZdZlkVRZIzR933f9/u+XxQFEaWUMcZxHKUUEaWUMQbHcXRdp7UmogRBEIZhGIZhGIZhGIZhGIZhGIZhGIZhGIZhGP/w/f399fX15eVlvV4vl4vWerPZcBwXhqEwDFMUpTAMQzAM49y5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnT" alt="AVANTI Logo">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABLAAAASwCAIAAABkQySYAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAgAElEQVR4nO3dQY7rOBKG4crwwIftQQrJSIrqGgZ8Gxz0QXqfQs+jiHkUfQzc98hj0CMvoI8xvIwxvLwNPIFxeMBPFElRokhREkWKf/39AAI4JEvCiRRFkpL4f38//+OPPz59+vSfP//58+fPn3/8+dOnT5+fn//48WfCBgAAAACCLwAAAADgP8FfAAAAAMB/gr8AAAAAgP8EfwEAAAAA/wn+AgAAAAD+E/wFAAAAAPwn+AsAAAAA+E/wFwAAAADwn+AvAAAAAOA/wV8AAAAAwH+CvwAAAACA/wR/AQAAAADf/OvXr/f3d5RSOZdZlkVRZIzR933f9/u+XxQFEaWUMcZxHKUUEaWUMQbHcXRdp7UmogRBEIZhGIZhGIZhGIZhGIZhGIZhGIZhGIZhGP/w/f399fX15eVlvV4vl4vWerPZcBwXhqEwDFMUpTAMQzAM49y5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnTt37ty5c+fOnT" alt="AVANTI - Quality products for kids and pets">
             </div>
             <div class="tagline">
-                WE UNDERSTAND<br>WE LOVE<br>WE CARE
+                WE UNDERSTAND • WE LOVE • WE CARE
             </div>
         </header>
 
-        <div class="container">
-            <div class="hero-section">
-                <div class="hero-subtitle">PRODUCT CATALOGUES</div>
+        <main id="main-content" class="container">
+            <section class="hero-section">
+                <h2 class="hero-subtitle">Product Catalogues</h2>
                 <h1>Explore Our Range</h1>
                 <p class="hero-description">Quality products for kids and pets designed with care and understanding of your needs</p>
-            </div>
+            </section>
 
-            <div class="catalogue-grid">
-                <a href="https://drive.google.com/file/d/1_BWOTv2j9GVGjYWAMQPROFFXcR03xyVo/view?usp=drive_link" class="catalogue-card" target="_blank" rel="noopener noreferrer">
-                    <div class="card-header">🧸</div>
+            <section class="catalogue-grid" role="region" aria-label="Product catalogues">
+                <a href="https://drive.google.com/file/d/1_BWOTv2j9GVGjYWAMQPROFFXcR03xyVo/view?usp=drive_link" class="catalogue-card" target="_blank" rel="noopener noreferrer" aria-label="Kids Toys catalogue - opens in new window">
+                    <div class="card-header" aria-hidden="true">🧸</div>
                     <div class="card-content">
-                        <div class="card-title">Kids Toys</div>
-                        <div class="card-description">Explore our collection of toys designed for children's development and fun</div>
+                        <h3 class="card-title">Kids Toys</h3>
+                        <p class="card-description">Explore our collection of toys designed for children's development and fun</p>
                         <div class="download-btn">View Catalogue</div>
                     </div>
                 </a>
 
-                <a href="https://drive.google.com/file/d/1bPw-MoB2Kh2yNNbTM8GhDWhJMQRx_pqd/view?usp=drive_link" class="catalogue-card" target="_blank" rel="noopener noreferrer">
-                    <div class="card-header">🎈</div>
+                <a href="https://drive.google.com/file/d/1bPw-MoB2Kh2yNNbTM8GhDWhJMQRx_pqd/view?usp=drive_link" class="catalogue-card" target="_blank" rel="noopener noreferrer" aria-label="Nursery Toys catalogue - opens in new window">
+                    <div class="card-header" aria-hidden="true">🎈</div>
                     <div class="card-content">
-                        <div class="card-title">Nursery Toys</div>
-                        <div class="card-description">Safe and engaging toys for babies and toddlers to explore and learn</div>
+                        <h3 class="card-title">Nursery Toys</h3>
+                        <p class="card-description">Safe and engaging toys for babies and toddlers to explore and learn</p>
                         <div class="download-btn">View Catalogue</div>
                     </div>
                 </a>
 
-                <a href="https://drive.google.com/file/d/1hujaI_N6I-HDPoYzIpIriWCJb5wezOle/view?usp=drive_link" class="catalogue-card" target="_blank" rel="noopener noreferrer">
-                    <div class="card-header">🍼</div>
+                <a href="https://drive.google.com/file/d/1hujaI_N6I-HDPoYzIpIriWCJb5wezOle/view?usp=drive_link" class="catalogue-card" target="_blank" rel="noopener noreferrer" aria-label="Nursery Feeding catalogue - opens in new window">
+                    <div class="card-header" aria-hidden="true">🍼</div>
                     <div class="card-content">
-                        <div class="card-title">Nursery Feeding</div>
-                        <div class="card-description">Quality feeding products and accessories for infants and growing children</div>
+                        <h3 class="card-title">Nursery Feeding</h3>
+                        <p class="card-description">Quality feeding products and accessories for infants and growing children</p>
                         <div class="download-btn">View Catalogue</div>
                     </div>
                 </a>
 
-                <a href="https://drive.google.com/file/d/1H3kYNM-8mw3MNphTavinx1CX-PSsSGC9/view?usp=drive_link" class="catalogue-card" target="_blank" rel="noopener noreferrer">
-                    <div class="card-header">🎾</div>
+                <a href="https://drive.google.com/file/d/1H3kYNM-8mw3MNphTavinx1CX-PSsSGC9/view?usp=drive_link" class="catalogue-card" target="_blank" rel="noopener noreferrer" aria-label="Pet Toys catalogue - opens in new window">
+                    <div class="card-header" aria-hidden="true">🎾</div>
                     <div class="card-content">
-                        <div class="card-title">Pet Toys</div>
-                        <div class="card-description">Fun and interactive toys designed for your pet's happiness and health</div>
+                        <h3 class="card-title">Pet Toys</h3>
+                        <p class="card-description">Fun and interactive toys designed for your pet's happiness and health</p>
                         <div class="download-btn">View Catalogue</div>
                     </div>
                 </a>
 
-                <a href="https://drive.google.com/file/d/1epBnm3Kc3RB0iipbDd07FjYipoOYzjJQ/view?usp=drive_link" class="catalogue-card" target="_blank" rel="noopener noreferrer">
-                    <div class="card-header">🐕</div>
+                <a href="https://drive.google.com/file/d/1epBnm3Kc3RB0iipbDd07FjYipoOYzjJQ/view?usp=drive_link" class="catalogue-card" target="_blank" rel="noopener noreferrer" aria-label="Pet Feeding catalogue - opens in new window">
+                    <div class="card-header" aria-hidden="true">🐕</div>
                     <div class="card-content">
-                        <div class="card-title">Pet Feeding</div>
-                        <div class="card-description">Bowls, feeders, and feeding accessories for your beloved pets</div>
+                        <h3 class="card-title">Pet Feeding</h3>
+                        <p class="card-description">Bowls, feeders, and feeding accessories for your beloved pets</p>
                         <div class="download-btn">View Catalogue</div>
                     </div>
                 </a>
 
-                <a href="https://drive.google.com/file/d/1IYtRIo0ntzkW0coCoFj4u2cuMqRD09fA/view?usp=drive_link" class="catalogue-card" target="_blank" rel="noopener noreferrer">
-                    <div class="card-header">🧗</div>
+                <a href="https://drive.google.com/file/d/1IYtRIo0ntzkW0coCoFj4u2cuMqRD09fA/view?usp=drive_link" class="catalogue-card" target="_blank" rel="noopener noreferrer" aria-label="Pet Rope Toys catalogue - opens in new window">
+                    <div class="card-header" aria-hidden="true">🧗</div>
                     <div class="card-content">
-                        <div class="card-title">Pet Rope Toys</div>
-                        <div class="card-description">Durable rope toys for chewing and interactive play with your pets</div>
+                        <h3 class="card-title">Pet Rope Toys</h3>
+                        <p class="card-description">Durable rope toys for chewing and interactive play with your pets</p>
                         <div class="download-btn">View Catalogue</div>
                     </div>
                 </a>
 
-                <a href="https://drive.google.com/file/d/1R0HHaPtyFs1_sgc_eJRyfAI6H1Qv-TTK/view?usp=drive_link" class="catalogue-card" target="_blank" rel="noopener noreferrer">
-                    <div class="card-header">🛏️</div>
+                <a href="https://drive.google.com/file/d/1R0HHaPtyFs1_sgc_eJRyfAI6H1Qv-TTK/view?usp=drive_link" class="catalogue-card" target="_blank" rel="noopener noreferrer" aria-label="Pet Bedding catalogue - opens in new window">
+                    <div class="card-header" aria-hidden="true">🛏️</div>
                     <div class="card-content">
-                        <div class="card-title">Pet Bedding</div>
-                        <div class="card-description">Comfortable and cozy bedding options for your furry friends</div>
+                        <h3 class="card-title">Pet Bedding</h3>
+                        <p class="card-description">Comfortable and cozy bedding options for your furry friends</p>
                         <div class="download-btn">View Catalogue</div>
                     </div>
                 </a>
-            </div>
-        </div>
+            </section>
+        </main>
     </div>
 
-    <footer>
+    <footer role="contentinfo">
         <div class="footer-brand">AVANTI</div>
         <div class="footer-tagline">WE UNDERSTAND • WE LOVE • WE CARE</div>
-        <div class="footer-text">© 2026 AVANTI. All products designed with care for your family.</div>
+        <div class="footer-text">&copy; 2026 AVANTI. All products designed with care for your family.</div>
     </footer>
 </body>
 </html>
